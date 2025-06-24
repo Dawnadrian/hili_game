@@ -12,9 +12,13 @@ const bgMusic = document.getElementById('bg-music');
 const cheer = document.getElementById('cheer-sound');
 const fail = document.getElementById('fail-sound');
 
-// play bg music
+// prepare bg music, will play on first user interaction
 bgMusic.volume = 0.2;
-bgMusic.play().catch(() => {});
+function enableBGMusic() {
+  bgMusic.play().catch(() => {});
+  document.removeEventListener('click', enableBGMusic);
+}
+document.addEventListener('click', enableBGMusic);
 
 // pick 4 choices
 function pickChoices(correct) {
