@@ -16,10 +16,10 @@ body {
   font-family: 'Alef', sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
-  color: #d6336c;
-  opacity: 0.1;
+  color: #c36910;
+  opacity: 0.5;
   white-space: nowrap;
-  z-index: 0;
+  z-index: 2;
 }
 .retro-line.left {
   left: 5%;
@@ -33,11 +33,11 @@ body {
 }
 #game {
   position: relative;
-  background: #ffffff;
+  background: #fabbe8;
   border-radius: 16px;
   box-shadow: 0 12px 24px rgba(0,0,0,0.15);
   padding: 40px;
-  width: 400px;
+  width: 4000px;
   text-align: center;
   z-index: 1;
 }
@@ -61,7 +61,7 @@ h1 {
 }
 .monster-img {
   width: 140px;
-  margin: 0 8px;
+  margin: 0px;
   transform-origin: 50% 50%;
 }
 #question {
@@ -72,8 +72,8 @@ h1 {
 }
 .choice {
   display: inline-block;
-  margin: 12px;
-  padding: 16px 32px;
+  margin: 6px;
+  padding: 6px 32px;
   font-size: 1.6rem;
   font-weight: 600;
   color: #ffffff;
