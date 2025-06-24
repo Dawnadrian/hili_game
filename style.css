@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Poppins:wght@400;600&display=swap');
+body {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffe6f3 0%, #ffcced 100%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.retro-line {
+  position: absolute;
+  font-family: 'Alef', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #d6336c;
+  opacity: 0.1;
+  white-space: nowrap;
+  z-index: 0;
+}
+.retro-line.left {
+  left: 5%;
+  transform: rotate(-15deg);
+  text-align: left;
+}
+.retro-line.right {
+  right: 5%;
+  transform: rotate(15deg);
+  text-align: right;
+}
+#game {
+  position: relative;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  padding: 40px;
+  width: 400px;
+  text-align: center;
+  z-index: 1;
+}
+h1 {
+  font-size: 2.5rem;
+  color: #d6336c;
+  margin-bottom: 24px;
+}
+#helper {
+  font-size: 1.4rem;
+  color: #444;
+  min-height: 2em;
+  margin-bottom: 12px;
+}
+#monsters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 160px;
+  margin-bottom: 16px;
+}
+.monster-img {
+  width: 140px;
+  margin: 0 8px;
+  transform-origin: 50% 50%;
+}
+#question {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #a61f60;
+  margin-bottom: 24px;
+}
+.choice {
+  display: inline-block;
+  margin: 12px;
+  padding: 16px 32px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ff9ac1 0%, #ff5fa1 100%);
+  border: none;
+  border-radius: 28px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.choice:hover {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.choice.wrong {
+  animation: wobble 0.4s;
+}
+@keyframes wobble {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+.monster-dance {
+  animation: rotate-monster 0.6s ease-in-out 1;
+}
+@keyframes rotate-monster {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(20deg); }
+  50% { transform: rotate(-20deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+@media (max-width: 360px) {
+  #game { width: 90%; padding: 20px; }
+  .choice { padding: 10px 18px; font-size: 1.2rem; }
+}

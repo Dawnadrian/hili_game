@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>monster multipication</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Retro Hebrew encouragement lines positioned left/right -->
+  <div class="retro-line left" style="top: 15%">קדימה היא-לוש</div>
+  <div class="retro-line right" style="top: 40%"> תנצחי אותם נשמה</div>
+  <div class="retro-line left" style="top: 65%">יופי כפרה תמשיכי זה ממש חשוב</div>
+
+  <div id="game">
+    <h1>היא-לי לוחמת המפלצות</h1>
+    <div id="helper"></div>
+    <div id="monsters" aria-live="polite"></div>
+    <div id="question"></div>
+    <div id="choices"></div>
+  </div>
+
+  <!-- Feedback sounds (place in sounds/ folder) -->
+  <audio id="bg-music" src="sounds/bg-music.mp3" preload="auto" loop></audio>
+  <audio id="cheer-sound" src="sounds/cheer.mp3" preload="auto"></audio>
+  <audio id="fail-sound" src="sounds/fart.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
