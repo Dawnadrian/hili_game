@@ -61,7 +61,8 @@ h1 {
 }
 .monster-img {
   width: 140px;
-  margin: 0px;
+  height: 140px;
+  margin: 6px;
   transform-origin: 50% 50%;
 }
 #question {
